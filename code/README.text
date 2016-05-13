@@ -1,0 +1,46 @@
+The scripts in this folder were used to create the QUT-NOISE-TIMIT
+database and or implement the QUT-NOISE-SRE protocol.
+
+Documentation for each file (if extant) is in the files
+themselves. Use `help <filename-without-.m>` inside MATLAB to access
+them.
+
+## Recreating QUT-NOISE-TIMIT ##
+
+To recreate the entire QUT-NOISE-TIMIT database the following MATLAB
+code can be used:
+
+`createQUTNOISETIMIT.m` : creates the entire QUT-NOISE-TIMIT database
+
+## Creating alternative speech-on-noise databases ##
+
+If you wish to create your own alternative databases with the
+QUT-NOISE and TIMIT databases (or other sources of clean speech), the
+following functions may be useful too:
+
+`batchaddspeechtonoise.m` : creates a batch of noisy speech sequences
+from a single original noise file.  (see `help batchaddspeechtonoise`)
+
+`addspeechtonoise.m` : creates a single noisy speech sequence from
+a single original noise file.  (see `help addspeechtonoise`)
+
+## Creating a noise-on-speech database (the QUT-NOISE-SRE protocol) ##
+
+If you wish to make use of the QUT-NOISE-SRE protocol to create your
+own alternative noise-on-speech database, the following functions
+might be useful:
+
+`batchaddnoisetospeech.m` : creates a batch of noisy speech files by
+adding noise to single clean speech files. (see `help
+batchaddnoisetospeech`)
+
+`addnoisetospeech.m` : creates a single noisy speech file by adding
+noise to a single clean speech file. (see `help addnoisetospeech`)
+
+## Recreating QUT-NOISE-SRE files provided ##
+
+If you wish to recreate files created with the QUT-NOISE-SRE protocol,
+then the following function might be useful:
+
+`createQUTNOISESREfiles.m` : recreates a list of files based on the
+QUT-NOISE-SRE protocol.

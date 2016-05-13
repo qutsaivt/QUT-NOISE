@@ -1,0 +1,23 @@
+# this file outlines which noise files are combined with which portions of the timit database
+# to create the QUT-NOISE-TIMIT database
+# QUT-NOISE 	   TIMIT
+CAFE-FOODCOURTB-1  timit.t1
+CAFE-FOODCOURTB-2  timit.t2
+CAFE-CAFE-1	   timit.t3
+CAFE-CAFE-2	   timit.t4
+HOME-KITCHEN-1     timit.t1
+HOME-KITCHEN-2     timit.t2
+HOME-LIVINGB-1     timit.t3
+HOME-LIVINGB-2     timit.t4
+STREET-CITY-1      timit.t1
+STREET-CITY-2      timit.t2
+STREET-KG-1	   timit.t3
+STREET-KG-2	   timit.t4
+CAR-WINDOWNB-1     timit.t1
+CAR-WINDOWNB-2     timit.t2
+CAR-WINUPB-1       timit.t3
+CAR-WINUPB-2       timit.t4
+REVERB-POOL-1      timit.t1
+REVERB-POOL-2      timit.t2
+REVERB-CARPARK-1   timit.t3
+REVERB-CARPARK-2   timit.t4

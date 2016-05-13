@@ -1,0 +1,160 @@
+# The QUT-NOISE Databases and Protocols #
+
+This distribution contains the QUT-NOISE database and the code
+required to create the QUT-NOISE-TIMIT database from the QUT-NOISE
+database and a locally installed copy of the TIMIT database. It also
+contains code to create the QUT-NOISE-SRE protocol on top of an
+existing speaker recognition evaluation database (such as NIST
+evaluations).
+
+Further information on the QUT-NOISE and QUT-NOISE-TIMIT databases is
+available in our paper:
+
+> D. Dean, S. Sridharan, R. Vogt, M. Mason (2010) "The QUT-NOISE-TIMIT
+> corpus for the evaluation of voice activity detection algorithms",
+> in *Proceedings of Interspeech 2010*, Makuhari Messe International
+> Convention Complex, Makuhari, Japan, available at
+> <http://eprints.qut.edu.au/38144/>.
+
+This paper is also available in the file `docs/Dean2010, The
+QUT-NOISE-TIMIT corpus for the evaluation of voice activity detection
+algorithm.pdf` distributed with this database.
+
+Further information on the QUT-NOISE-SRE protocol is available in our
+paper:
+
+> D. Dean, A. Kanagasundaram, H. Ghaemmaghami, M. Hafizur,
+> S. Sridharan (2015) "The QUT-NOISE-SRE protocol for the evaluation
+> of noisy speaker recognition". In *Proceedings of Interspeech 2015*,
+> September, Dresden, Germany, available at
+> <http://eprints.qut.edu.au/85240/>.
+
+This paper is also available in the file `docs/Dean2015, The
+QUT-NOISE-SRE protocol for the evaluation of noisy speaker
+recognition.pdf` distributed with this database.
+
+## Licensing ##
+
+The QUT-NOISE data is licensed CC-BY-SA, and the code required to
+create the QUT-NOISE-TIMIT database and QUT-NOISE-SRE protocols is
+licensed under a BSD-style license. Please consult the approriate
+`LICENSE.text` files (in the `code` and `QUT-NOISE` directories) for
+more information.
+
+To attribute this database, please include the following citation:
+
+> D. Dean, S. Sridharan, R. Vogt, M. Mason (2010) "The QUT-NOISE-TIMIT
+> corpus for the evaluation of voice activity detection algorithms",
+> in *Proceedings of Interspeech 2010*, Makuhari Messe International
+> Convention Complex, Makuhari, Japan, available at
+> <http://eprints.qut.edu.au/38144/>.
+
+If your work is based upon the QUT-NOISE-SRE, please _also_ include
+this citation:
+
+> D. Dean, A. Kanagasundaram, H. Ghaemmaghami, M. Hafizur,
+> S. Sridharan (2015) "The QUT-NOISE-SRE protocol for the evaluation
+> of noisy speaker recognition". In *Proceedings of Interspeech 2015*,
+> September, Dresden, Germany, available at
+> <http://eprints.qut.edu.au/85240/>.
+
+## Download and Installation ##
+
+Download the following QUT-NOISE*.zip files
+
+ * [`QUT_NOISE.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE.zip) (26.7 MB)
+ * [`QUT_NOISE_CAFE.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_CAFE.zip) (1.6 GB)
+ * [`QUT_NOISE_CAR.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_CAR.zip) (1.7 GB)
+ * [`QUT_NOISE_HOME.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_HOME.zip) (1.4 GB)
+ * [`QUT_NOISE_REVERB.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_REVERB.zip) (1.4 GB)
+ * [`QUT_NOISE_STREET.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_STREET.zip) (1.6 GB)
+
+Please unzip all QUT-NOISE*.zip files into the same directory, and you
+should have the following directory structure:
+
+     QUT-NOISE
+      +--QUT-NOISE         (.wav files collected for QUT-NOISE)
+      |   +--labels        (time labels)
+      |   +--impulses      (calculated room impulse responses)
+      +--QUT-NOISE-TIMIT   (will contain the QUT-NOISE-TIMIT database after installation)
+      +--code              (code used to create QUT-NOISE-TIMIT)
+      +--docs              (this file and the publications)
+   
+At this point, you have the QUT-NOISE database. If you wish to create
+the QUT-NOISE-TIMIT database, or create a database based upon the
+QUT-NOISE-SRE protocol please continue to read the following sections.
+
+## Creating QUT-NOISE-TIMIT ##
+
+### Obtaining TIMIT ###
+
+In order to construct the QUT-NOISE-TIMIT database from the QUT-NOISE
+data supplied here you will need to obtain a copy of the
+[TIMIT database from the Linguistic Data Consortium][timit]. If you
+just want to use the QUT-NOISE database, or you wish to combine it
+with different speech data, TIMIT is not required.
+
+[timit]: http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC93S1
+
+### Creating QUT-NOISE-TIMIT ###
+
+Once you have obtained TIMIT, download and install a copy of
+[VOICEBOX: Speech Processing Toolbox for MATLAB][vb] and install it in
+your `MATLABPATH`.
+
+[vb]: http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html
+
+Run `matlab` in the `QUT-NOISE/code` directory, and run the function
+`createQUTNOISETIMIT('/location/of/timit-cd/timit')`. This will create
+the QUT-NOISE-TIMIT database in the `QUT-NOISE/QUT-NOISE-TIMIT` directory.
+
+If you wish to verify that the QUT-NOISE-TIMIT database matches that
+evaluated in our original paper, please check that the md5sums (use
+`md5sum` on unix-based OSes) match those in the
+`QUT-NOISE-TIMIT/md5sum.txt` file.
+
+## Using the QUT-NOISE-SRE protocol ##
+
+The code related to the QUT-NOISE-SRE protocol can be used in two ways:
+
+1. To create a collection of noisy audio files across the scenarios in
+   the QUT-NOISE database at different noise levels, or,
+
+2. To recreate a list of file names based on the QUT-NOISE-SRE protocl
+   produced by another researcher, having already done (1). This
+   allows existing research to be reproduced without having to send
+   large volumes of audio around.
+
+If you are interested in creating your own noisy database from an
+existing SRE database (1 above), please look at the example script
+`exampleQUTNOISESRE.sh` in the `QUT-NOISE/code` directory. You will need
+to make some modifications, but it should give you the right idea.
+
+If you are interested in creating our QUT-NOISE-NIST2008 database
+published at Interspeech 2015, you can find the list of created noisy
+files in the `QUT-NOISE-NIST2008.train.short2.list` and
+`QUT-NOISE-NIST2008.test.short3.list` files in the `QUT-NOISE/code`
+directory.
+
+These files can be recreated as follows (provided you have access to
+the NIST2008 SRE data):
+
+Run `matlab` in the `QUT-NOISE/code` directory, and run the following
+functions:
+
+    createQUTNOISESREfiles('NIST2008.train.short2.list', ...
+	                       'QUT-NOISE-NIST2008.train.short2.list', ...
+	                       '<location/of/NIST2008/SRE>', ...
+	                       '../QUT-NOISE-NIST2008')
+    createQUTNOISESREfiles('NIST2008.test.short3.list', ...
+	                       'QUT-NOISE-NIST2008.test.short3.list', ...
+	                       '<location/of/NIST/2008/SRE>', ...
+	                       '../QUT-NOISE-NIST2008')
+
+
+This may take some time to execute, so if you have access to a
+computing cluster, it may be worth dividing the `QUT-NOISE-NIST2008.*`
+files into smaller chunks and running in parallel. Just make sure that
+testing or training noisy files are associated with testing or
+training clean files (The `NIST2008.*` files) - but you don't need to
+split the clean file lists.
