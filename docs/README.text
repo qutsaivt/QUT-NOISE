@@ -62,12 +62,12 @@ this citation:
 
 Download the following QUT-NOISE*.zip files
 
- * [`QUT_NOISE.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE.zip) (26.7 MB)
- * [`QUT_NOISE_CAFE.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_CAFE.zip) (1.6 GB)
- * [`QUT_NOISE_CAR.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_CAR.zip) (1.7 GB)
- * [`QUT_NOISE_HOME.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_HOME.zip) (1.4 GB)
- * [`QUT_NOISE_REVERB.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_REVERB.zip) (1.4 GB)
- * [`QUT_NOISE_STREET.zip`](https://Q0102-RO:Vieyae3G@q0102.qcloud.qcif.edu.au/QUT_NOISE_STREET.zip) (1.6 GB)
+ * [`qutnoise.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/8342a090-89e7-4402-961e-1851da11e1aa/download/qutnoise.zip) (26.7 MB)
+ * [`qutnoisecafe.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/9b0f10ed-e3f5-40e7-b503-73c2943abfb1/download/qutnoisecafe.zip) (1.6 GB)
+ * [`qutnoisecar.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/7412452a-92e9-4612-9d9a-6b00f167dc15/download/qutnoisecar.zip) (1.7 GB)
+ * [`qutnoisehome.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/35cd737a-e6ad-4173-9aee-a1768e864532/download/qutnoisehome.zip) (1.4 GB)
+ * [`qutnoisereverb.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/164d38a5-c08e-4e20-8272-793534eb10c7/download/qutnoisereverb.zip) (1.4 GB)
+ * [`qutnoisestreet.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/10eeceae-9f0c-4556-b33a-dcf35c4f4db9/download/qutnoisestreet.zip) (1.6 GB)
 
 Please unzip all QUT-NOISE*.zip files into the same directory, and you
 should have the following directory structure:
