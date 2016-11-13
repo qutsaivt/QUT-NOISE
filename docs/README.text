@@ -69,7 +69,7 @@ Download the following QUT-NOISE*.zip files
  * [`qutnoisereverb.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/164d38a5-c08e-4e20-8272-793534eb10c7/download/qutnoisereverb.zip) (1.4 GB)
  * [`qutnoisestreet.zip`](https://data.researchdatafinder.qut.edu.au/dataset/a0eed5af-abd8-441b-b14a-8e064bc3d732/resource/10eeceae-9f0c-4556-b33a-dcf35c4f4db9/download/qutnoisestreet.zip) (1.6 GB)
 
-Please unzip all QUT-NOISE*.zip files into the same directory, and you
+Please unzip all qutnoise*.zip files into the same directory, and you
 should have the following directory structure:
 
      QUT-NOISE
